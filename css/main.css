@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif,Verdana, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.shadow-slider {
+    height: 100%;
+    width: 21vw;
+    background-color: #373636d9;
+    position: fixed;
+    right: -21vw;
+    top: 0;
+    z-index: 100;
+}
+
+button,a{
+    -webkit-tap-highlight-color: transparent;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #39383891;
+    flex-direction: column;
+}
+
+nav{
+    width: 100%;
+    position:fixed;
+    height: 9vh;
+    background-color: white;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: .1rem .1rem .5rem #343333;
+    padding-left: 5rem;
+    z-index: 1;
+}
+
+nav .toggler-container{
+    width: 2.7rem;
+    height: 2.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -4.5rem;
+    padding: .6rem 0rem;
+    display: none;
+    transition: background-color .3s ease;
+    z-index: 3;
+}
+/*
+nav .toggler-container .ch {
+    width: 2.7rem;
+    height: 2.7rem;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    xvisibility: hidden;
+}*/
+
+.toggler-container .toggler{
+    width: 51%;
+    height: .1rem;
+    background-color: #636060;
+}
+
+.toggler-container .toggler:first-child,
+.toggler-container .toggler:last-child{
+    height: .15rem;
+    border-radius: 3rem;
+}
+
+
+nav .logo{
+    padding: 0rem 3rem;
+    flex: 2;
+}
+
+.logo h1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: -10px;
+    z-index: 2;
+}
+
+.logo h1 span:last-child{
+    color: rgb(167, 21, 167);
+}
+
+.logo h1 img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+nav .nav-elements{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 3;
+}
+
+.nav-elements .nav-element{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0rem 2rem;
+    color: rgb(70, 69, 69);
+    line-height: 7vh;
+}
+
+.nav-elements .nav-element:hover{
+    background-color: rgb(235, 93, 248);
+    color: #ffffff;
+}
+
+nav .side-elements{
+    width: 80vw;
+    height: 91vh;
+    background-color:#ffffff; 
+    position: absolute;
+    top:9vh;
+    left: 0;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 0rem #c4c3c361;
+    margin-left: -80vw;
+    transition: margin .05s ease-in;
+}
+
+.side-elements .side-element{
+    width: 80vw;
+    display: block;
+    padding: 1.2rem 1rem;
+    text-decoration: none;
+    color:  rgb(90, 90, 90);
+    font-weight: bold;
+    transition: width .5s ease-in;
+}
+
+.side-elements .side-element:active{
+    background-color: rgb(179, 175, 175);
+    color: white;
+}
+
+.side-elements .side-element i{
+    margin-right: 1.1rem;
+    padding-left: .6rem;
+    color: rgb(90, 90, 90);
+} 
+
+.side-elements div{
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.side-elements div:nth-child(3) i{
+    margin-right: 1.5rem;
+    padding-left: .6rem;
+} 
+
+/* ---------------------------------------------------------- SIDE SLIDER ----------------------------------------------------------*/
+
+.slider{
+    width: 100%;
+    height: 93vh;
+    margin-top: 7vh;
+    background-image: url("https://github.com/amrbaligh/Full2/blob/master/imgs/2.jpg?raw=true");
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position-y: -10vh;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgb(179, 175, 175);
+}
+
+.slider .slider-text{
+    width: 30%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left:10rem;
+}
+
+.slider-text h1{
+    width: 100%;
+    font-size: 3rem;
+}
+
+.slider-text p{
+    font-size: 2rem;
+}
+
+
+
+.slider .slider-btn{
+    width: 10rem;
+    background-color: rgb(241, 56, 241);
+    font-size: 1.39rem;
+    color: #ffffff;
+    border-radius: 5rem;
+    padding: .75rem 1.5rem;
+    margin:5rem 10rem 0rem 10rem;
+    border: 0px;
+    cursor: pointer;
+    align-self: center;
+    display: block;
+    outline: none;
+    border: none;
+    box-shadow: 0rem 0rem 0.9rem #c2c1c1f2;
+}
+
+.slider .slider-btn:hover{
+    font-size: 1.4rem;
+}
+
+.slider .slider-btn:active{
+    font-size: 1.38rem;
+    box-shadow: 0rem 0rem 0.3rem #b4b3b3f2;
+}
+
+/* ---------------------------------------------------------- SIDE SLIDER ----------------------------------------------------------*/
+
+main{
+    width: 100%;
+    background-color: rgb(226, 225, 225);
+}
+
+main .div{
+    width: 100%;
+    height: 100vh;
+}
+
+.row{
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row:nth-child(3) .advice-first{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(241, 174, 247);
+    box-shadow: .1rem 0rem 1rem rgb(131, 130, 130);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-first .circle{
+    width: 70vh;
+    height: 70%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1rem solid #ffffff;
+    box-shadow: inset 0rem 0.2rem 0.7rem 0rem #000000, -0.2rem -0.2rem 0.9rem 0px #565555cc;
+    background-image: url("https://github.com/amrbaligh/Full2/blob/master/imgs/advice.jpg?raw=true");
+    background-size: cover;
+}
+
+.advice-second{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    background-color: #f5f5f5;
+}
+
+.advice-second h1{
+    align-self: flex-start;
+    padding: 2rem 0rem;
+}
+
+.advice-second p:first-of-type{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.advice-second p:last-of-type {
+    display: none;
+}
+
+.advice-second .advice-btn{
+    width: 13rem;
+    background-color: rgb(241, 56, 241);
+    font-size: 1.39rem;
+    color: #ffffff;
+    border-radius: 5rem;
+    padding: .75rem 1.5rem;
+    margin:5rem 10rem 0rem 10rem;
+    border: 0px;
+    cursor: pointer;
+    align-self: center;
+    display: block;
+    outline: none;
+    border: none;
+    box-shadow: 0rem 0rem 0.9rem #080808f2;
+}
+
+.advice-second .advice-btn:active{
+    box-shadow: 0rem 0rem 0.7rem #080808f2;
+    font-size: 1.38rem;
+}
+.row:nth-child(3){
+    background-color: #6b6b6d;
+}
+
+/* ---------------------------------------------------------- SIDE SLIDER ----------------------------------------------------------*/
+
+
+.slider-bx{
+    width: 100vw;
+    height: 93vh;
+    backface-visibility: hidden;
+}
+
+.slider-img{
+    width: 100vw !important;
+    height: 100% !important;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.slider-img span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70px;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #353535;
+}
+
+.slider-img span h3{
+    display: block;
+    height: auto;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.slider-img:nth-child(2){
+    background-image: url('/imgs/Slider1.jpg');
+}
+.slider-img:nth-child(3){
+    background-image: url('/imgs/Slider2.jpg');
+}
+.slider-img:nth-child(4){
+    background-image: url('/imgs/Slider3.jpg');
+}
+/* ---------------------------------------------------------- SIDE SLIDER ----------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------- BreakPoint For Tablets ----------------------------------------------------*/
+/* ---------------------------------------------------- BreakPoint For Tablets ----------------------------------------------------*/
+
+@media screen and (max-width:1100px){
+    nav .toggler-container{
+        display: flex;
+    }
+    nav .logo{
+        padding: 0rem .2rem;
+    }
+    nav .nav-elements{
+        display: none;
+    }
+    nav .side-elements{
+        display: flex;
+    }
+    /* ---------------------------------------------------------- SLIDER ----------------------------------------------------------*/
+    .slider{
+        background-image: url("https://github.com/amrbaligh/Full2/blob/master/imgs/2.jpg?raw=true");
+        background-size: cover;
+    }
+    .slider .slider-text{
+        width: 60%;
+        margin-left: 2rem ;
+    }
+    .slider-text h1{
+        width: 100%;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    /* ---------------------------------------------------------- SLIDER ----------------------------------------------------------*/
+    .row:nth-child(3) .advice-first{
+        height: 50%;
+        width: 100%;
+        background-color: rgb(241, 174, 247);
+        box-shadow: .1rem 0rem 1rem rgb(131, 130, 130);
+    }
+    .advice-first .circle{
+        width: 35vh;
+        height: 70%;
+        border-radius: 50%;
+        background-color: #ffffff;
+    }
+    .advice-second{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+
+    .advice-second h1{
+        font-size: 2rem;
+        padding-bottom: 0rem 0rem 1rem 0rem;
+        margin-top: -3rem;
+        align-self: center;
+    }
+
+    .advice-second p:first-of-type{
+        display: none;
+    }
+
+    .advice-second p:last-of-type {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .advice-second .advice-btn{
+        margin-top: 4rem;
+    }
+    .slider-img:nth-child(2){
+        background-image: url("/imgs/Nike1.jpg");
+    }
+    .slider-img:nth-child(3){
+        background-image: url("/imgs/Nike2.jpg");
+    }
+    .slider-img:nth-child(4){
+        background-image: url("/imgs/Nike3.jpg");
+    }
+    /* ---------------------------------------------------- BreakPoint For Tablets ----------------------------------------------------*/
+/* ---------------------------------------------------- BreakPoint For Tablets ----------------------------------------------------*/
+}
+
+/* ---------------------------------------------------- BreakPoint For Phones ----------------------------------------------------*/
+/* ---------------------------------------------------- BreakPoint For Phones ----------------------------------------------------*/
+
+@media screen and (max-width:450px){
+    nav .toggler-container{
+        display: flex;
+    }
+    nav .logo{
+        padding: 0rem .2rem;
+    }
+    nav .nav-elements{
+        display: none;
+    }
+    nav .side-elements{
+        display: flex;
+    }
+    /* ----------------------------------------------------------SIDE SLIDER ----------------------------------------------------------*/
+    .slider{
+        background-image: url("https://github.com/amrbaligh/Full2/blob/master/imgs/2.jpg?raw=true");
+        background-size: cover ;
+        background-position: -55vw 0rem;
+    }
+    .slider .slider-text{
+        width: 70%;
+        margin-left: 2rem ;
+    }
+    
+    .slider-text h1{
+        width: 100%;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .slider-text p{
+        font-size: 1.5rem;
+    }
+    .slider .slider-btn{
+        width: 9rem;
+    }
+    /* ----------------------------------------------------------SIDE SLIDER ----------------------------------------------------------*/
+    .row:nth-child(3) .advice-first{
+        height: 50%;
+        width: 100%;
+        background-color: rgb(241, 174, 247);
+        box-shadow: .1rem 0rem 1rem rgb(131, 130, 130);
+    }
+    .advice-first .circle{
+        width: 35vh;
+        height: 70%;
+        border-radius: 50%;
+        background-color: #ffffff;
+    }
+    .advice-second{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        xflex-direction: column;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+
+    .advice-second h1{
+        font-size: 2rem;
+        padding-bottom: 0rem 0rem 1rem 0rem;
+        margin-top: -3rem;
+    }
+
+    .advice-second p:first-of-type{
+        display: none;
+    }
+
+    .advice-second p:last-of-type {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .advice-second .advice-btn{
+        margin-top: 2rem;
+    }
+    .slider-img:nth-child(2){
+        background-image: url("/imgs/Nike1.jpg");
+    }
+    .slider-img:nth-child(3){
+        background-image: url("/imgs/Nike2.jpg");
+    }
+    .slider-img:nth-child(4){
+        background-image: url("/imgs/Nike3.jpg");
+    }
+}   
+
+
