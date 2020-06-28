@@ -371,13 +371,13 @@ main .div{
 
 
 .slider-img:nth-child(2){
-    background-image: url('/imgs/Slider1.jpg');
+    background-image: url('https://github.com/amrbaligh/test/blob/master/imgs/Slider1.jpg?raw=true');
 }
 .slider-img:nth-child(3){
-    background-image: url('/imgs/Slider2.jpg');
+    background-image: url('https://github.com/amrbaligh/test/blob/master/imgs/Slider2.jpg?raw=true');
 }
 .slider-img:nth-child(4){
-    background-image: url('/imgs/Slider3.jpg');
+    background-image: url('https://github.com/amrbaligh/test/blob/master/imgs/Slider3.jpg?raw=true');
 }
 /* ---------------------------------------------------------- SIDE SLIDER ----------------------------------------------------------*/
 
@@ -486,13 +486,13 @@ main .div{
         margin-top: 4rem;
     }
     .slider-img:nth-child(2){
-        background-image: url("/imgs/Nike1.jpg");
+        background-image: url("https://github.com/amrbaligh/test/blob/master/imgs/Nike1.jpg?raw=true");
     }
     .slider-img:nth-child(3){
-        background-image: url("/imgs/Nike2.jpg");
+        background-image: url("https://github.com/amrbaligh/test/blob/master/imgs/Nike2.jpg?raw=true");
     }
     .slider-img:nth-child(4){
-        background-image: url("/imgs/Nike3.jpg");
+        background-image: url("https://github.com/amrbaligh/test/blob/master/imgs/Nike3.jpg?raw=true");
     }
     /* ---------------------------------------------------- BreakPoint For Tablets ----------------------------------------------------*/
 /* ---------------------------------------------------- BreakPoint For Tablets ----------------------------------------------------*/
@@ -581,13 +581,13 @@ main .div{
         margin-top: 2rem;
     }
     .slider-img:nth-child(2){
-        background-image: url("/imgs/Nike1.jpg");
+        background-image: url("https://github.com/amrbaligh/test/blob/master/imgs/Nike1.jpg?raw=true");
     }
     .slider-img:nth-child(3){
-        background-image: url("/imgs/Nike2.jpg");
+        background-image: url("https://github.com/amrbaligh/test/blob/master/imgs/Nike2.jpg?raw=true");
     }
     .slider-img:nth-child(4){
-        background-image: url("/imgs/Nike3.jpg");
+        background-image: url("https://github.com/amrbaligh/test/blob/master/imgs/Nike3.jpg?raw=true");
     }
 }   
 
